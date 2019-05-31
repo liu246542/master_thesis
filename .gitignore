@@ -1,3 +1,16 @@
+wct1.eps
+wct10.eps
+wct5.eps
+zfb.eps
+hithesis.cls
+hithesis.cfg
+dtx-style.sty
+./figures/bthesistitle.eps
+./figures/hitlogo.eps
+./back/*.aux
+./body/*.aux
+./front/*.aux
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

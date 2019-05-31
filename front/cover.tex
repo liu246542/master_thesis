@@ -1,0 +1,89 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX root = ../main.tex
+
+\hitsetup{
+  %******************************
+  % 注意：
+  %   1. 配置里面不要出现空行
+  %   2. 不需要的配置信息可以删除
+  %******************************
+  %
+  %=====
+  % 秘级
+  %=====
+  statesecrets={公开},
+  natclassifiedindex={TP393.1},
+  intclassifiedindex={654},
+  %
+  %=========
+  % 中文信息
+  %=========
+  ctitleone={基于属性的凭证},%本科生封面使用
+  ctitletwo={及其应用},%本科生封面使用
+  ctitlecover={基于属性的凭证及其应用},%放在封面中使用，自由断行
+  ctitle={基于属性的凭证及其应用},%放在原创性声明中使用
+  % csubtitle={一条副标题}, %一般情况没有，可以注释掉
+  cxueke={工学},
+  csubject={计算机科学与技术},
+  caffil={南方科技大学},
+  cauthor={柳枫},
+  csupervisor={王琦助理教授},
+  % cassosupervisor={某某某教授}, % 副指导老师
+  % ccosupervisor={某某某教授}, % 联合指导老师
+  % 日期自动使用当前时间，若需指定按如下方式修改：
+  cdate={2019年6月},
+  cstudentid={11749258},
+  cstudenttype={硕士}, %非全日制教育申请学位者
+  %（同等学力人员）、（工程硕士）、（工商管理硕士）、
+  %（高级管理人员工商管理硕士）、（公共管理硕士）、（中职教师）、（高校教师）等
+  %
+  %
+  %=========
+  % 英文信息
+  %=========
+  etitle={Attribute-based credentials: Theory and Applications},
+  % esubtitle={This is the sub title},
+  exueke={Engineering},
+  esubject={Computer Science and Technology},
+  eaffil={\emultiline[t]{Southern University of Science and Technology}},
+  eauthor={Feng Liu},
+  esupervisor={Prof. Qi Wang},
+  % eassosupervisor={XXX},
+  % 日期自动生成，若需指定按如下方式修改：
+  edate={June, 2019},
+  estudenttype={Master of Art},
+  %
+  % 关键词用“英文逗号”分割
+  ckeywords={匿名凭证, 基于属性的凭证, 环签名, 车辆自组网},
+  ekeywords={anonymous credentials, attribute-based credentials, ring signature, VANETs},
+}
+
+\begin{cabstract}
+
+在信息产业高度发达的今天，人们在享受数字化服务带来便利的同时，服务提供商也在不断收集用户的隐私信息。
+如在申请某项服务时，用户通常需要提供身份信息来证明自己拥有获取此项服务的权限，服务商也就同时获取到该身份信息。
+要保护用户的隐私，我们可以使用一种具有匿名性质的凭证来代替传统的身份凭证。
+基于属性的凭证就属于这类具有匿名性质的凭证，它可以保证用户在完成验证的同时不泄露自己的隐私。
+像这样的凭证系统通常需要具备匿名性和可验证性，我们可以通过密码学来实现这两个基本性质。
+
+在这篇论文中，我们首先介绍了一些重要的密码学原语，然后阐述了如何利用这些密码学原语构造基于属性的凭证系统，并简要介绍了现实中存在的系统实例。
+作为基于属性的凭证系统的一个重要应用，我们针对车辆自组网中的安全与隐私保护问题，并结合现有的基于属性的凭证系统的构造及特点，设计了一个高效的保护隐私的解决方案。
+此方案的核心是基于环签名的机制，在满足车辆自组网环境中安全需求的情况下，同时有效地保护车辆的隐私。
+与现有的其它基于环签名的方案不同，此方案利用了基于身份的密码学和对称密码学的优势，合理地将路边的通信设施融入到整个系统中，解决了其它基于环签名的方案中存在的列表成员的可验证性问题。
+通过与其它方案对比，我们总结了该提出方案的优势，并对所实现的性质进行了详细说明。
+
+\end{cabstract}
+
+\begin{eabstract}
+
+With the rapid development of information technology, while people are enjoying the convenience enabled by information technology, the service providers are collecting users' private information.
+For example, when a user requests service, the identity information is usually required as a proof of his/her subscription while the service providers can learn the user's identity.
+For the purpose of preserving privacy in certain authentication scenarios, a kind of anonymous credentials are proposed.
+Attribute-based credentials (ABCs) are one of these anonymous credentials, which provide a powerful tool to preserve privacy in applications, of which the two important properties: authenticity and anonymity are achieved using cryptography.
+
+In this thesis, we first introduce some important cryptographic primitives, and show how to use these primitives to construct an ABCs system. 
+Then we focus on the vehicular ad-hoc networks(VANETs) and propose our scheme,which is efficient and privacy-preserving.
+Our proposed scheme is based on ring signature scheme, and is very different from other existing schemes by combining ID-based cryptography and symmetric cryptography, and is efficient to fulfill the verification of ring members.
+Furthermore, we compare our proposed scheme with other existing schemes, and summarize the properties of our scheme.
+
+\end{eabstract}
