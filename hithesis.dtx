@@ -2233,7 +2233,7 @@ delim_1 "\\hspace*{\\fill}"
 \def\hit@resume@ctitle{个人简历}
 \def\hit@resume@etitle{Resume}
 \def\hit@authorization@ctitle{学位论文原创性声明和使用权限}
-\def\hit@authorization@xtitle{哈尔滨工业大学与南方科技大学\hspace{\ccwd}联合培养研究生学位论文原创性声明和使用权限}
+\def\hit@authorization@xtitle{哈尔滨工业大学与南方科技大学联合培养研究生\hspace{\ccwd}学位论文原创性声明和使用权限}
 \def\hit@authorization@ctitleone{哈尔滨工业大学与南方科技大学联合培养研究生}
 \def\hit@authorization@ctitletwo{学位论文原创性声明和使用权限}
 \def\hit@authorization@etitle{Statement of copyright and Letter of authorization}
@@ -2553,6 +2553,7 @@ delim_1 "\\hspace*{\\fill}"
   \def\hit@toc@font{\sffamily}
 \fi
 \def\@pnumwidth{4em}%规定中的提前悬挂
+\def\@xnumwidth{1em}%规定中的提前悬挂
 \def\@tocrmarg{\@pnumwidth}
 \def\@dotsep{1}
 %    \end{macrocode}
@@ -2568,10 +2569,10 @@ delim_1 "\\hspace*{\\fill}"
     \addpenalty{-\@highpenalty}%
     %\vskip 4bp \@plus\p@
     \begingroup
-      \parindent \z@ \rightskip \@pnumwidth
-      \parfillskip -\@pnumwidth
+      \parindent \z@ \rightskip \@xnumwidth
+      \parfillskip -\@xnumwidth      
       \leavevmode
-      \advance\leftskip\@tempdima
+      % \advance\leftskip\@tempdima
       \hskip -\leftskip
       % numberline is called here, and it uses \@tempdima
       {\ifhit@bachelor\sffamily\else\csname hit@toc@font\endcsname\fi\heiti #1}
@@ -2580,6 +2581,7 @@ delim_1 "\\hspace*{\\fill}"
       \penalty\@highpenalty
     \endgroup
   \fi}
+  %\parindent \z@ \rightskip \@xnumwidth
 %    \end{macrocode}
 % 按工大标准, 缩小目录中各级标题之间的缩进，使它们相隔一个字符距离，也就是12pt。
 %    \begin{macrocode}
@@ -2717,9 +2719,9 @@ delim_1 "\\hspace*{\\fill}"
     }{%
     \includepdf[fitpaper=true,pagecommand={%
 	\thispagestyle{hit@empty}%
-	%\phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@xtitle\fi}%
-  \phantomsection\addcontentsline{toc}{chapter}{\hit@authorization@xtitle\fi}%
-	\ifhit@doctor%
+	\phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@xtitle\fi}%
+  %\phantomsection\addcontentsline{toc}{chapter}{\texorpdfstring{\ifhit@bachelor\hit@authorization@xtitle\else\hit@authorization@xtitle\fi}}%
+  \ifhit@doctor%
 %    \end{macrocode}
 % \changes{v1.0.13}{2018/4/5}{添加\cs{texorpdfstring}命令去除书签中带有格式时的警告}
 %    \begin{macrocode}
