@@ -1366,7 +1366,7 @@ delim_1 "\\hspace*{\\fill}"
 
 \renewcommand\mainmatter{%
   \ifhit@tocblank%
-  \addtocontents{toc}{\vspace{\baselineskip}} %规范中并没有这一要求，此处不应该加
+  %\addtocontents{toc}{\vspace{\baselineskip}} %规范中并没有这一要求，此处不应该加
   \addtocontents{toe}{\vspace{\baselineskip}}
   \fi%
   \ifhit@openright\cleardoublepage\else\clearpage\fi
@@ -2233,7 +2233,7 @@ delim_1 "\\hspace*{\\fill}"
 \def\hit@resume@ctitle{个人简历}
 \def\hit@resume@etitle{Resume}
 \def\hit@authorization@ctitle{学位论文原创性声明和使用权限}
-\def\hit@authorization@xtitle{哈尔滨工业大学与南方科技大学联合培养研究生\hspace{\ccwd}学位论文原创性声明和使用权限}
+\def\hit@authorization@xtitle{哈尔滨工业大学与南方科技大学联合培养研究生学位论文原创性声明和使用权限}
 \def\hit@authorization@ctitleone{哈尔滨工业大学与南方科技大学联合培养研究生}
 \def\hit@authorization@ctitletwo{学位论文原创性声明和使用权限}
 \def\hit@authorization@etitle{Statement of copyright and Letter of authorization}
@@ -2553,7 +2553,7 @@ delim_1 "\\hspace*{\\fill}"
   \def\hit@toc@font{\sffamily}
 \fi
 \def\@pnumwidth{4em}%规定中的提前悬挂
-\def\@xnumwidth{1em}
+\def\@xnumwidth{2em}
 \def\@tocrmarg{\@pnumwidth}
 \def\@dotsep{1}
 %    \end{macrocode}
@@ -2673,7 +2673,8 @@ delim_1 "\\hspace*{\\fill}"
 
 \newlist{idxwordlist}{description}{3}
 \setlist[idxwordlist, 1]{%
-  itemsep=\baselineskip,
+  % itemsep=\baselineskip,
+  nonsep,
   labelindent=8em,
   font=\normalsize\bfseries,
 }
